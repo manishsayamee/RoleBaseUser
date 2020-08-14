@@ -1,0 +1,67 @@
+<!-- 
+<html>
+<head>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- Full Name: <input type="text" name="name"> <br><br>
+    File: <input type="file" name="myfile"> <br><br>
+    <button type="submit">Submit</button> -->
+
+
+    <!-- {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form> -->
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign Up</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+  .container{
+  background-color:#7a3f79;
+}
+.sign{
+  margin-top: 20px;margin-left: 25%;color:white; 
+}
+.card{
+
+  padding: 30px; border-radius: 10px; width:50%; margin:auto
+}
+.btn{
+  background-color: #4373d9;
+  width:20%
+}
+</style>
+</head>
+<body class="container">
+  <h1  class="sign" style="font-family:Times New Roman;">Upload File</h1>
+  <div class="card">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+          <div class="form-group">
+              <label>Description of file</label>
+              <input type="text" class="form-control" placeholder="Descriptions of file" name="description" >
+          </div>
+          
+          <div class="form-group">
+              <label for="file">File</label>
+              <input type='file' class="form-control" placeholder="Message" name="file" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+  
+  </body>
+</html>
+

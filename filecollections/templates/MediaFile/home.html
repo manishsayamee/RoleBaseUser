@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+  <style>
+
+  .side{
+    background-color: #7a3f79;
+    height: 100vh;
+      }
+
+  .container{
+    margin:0px;
+    
+  }
+
+  h4{
+    padding:20px, 0px, 0px, 0px;
+    margin-top:20px;
+  
+  }
+  a{
+    color:white;
+    font-family:Times New Roman;
+  }
+ 
+  .mini-body{
+    margin-top:38vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35vw;
+    
+  }
+  h2{
+    font-family:Times New Roman;
+    color: #7a3f79;
+    font-size: 40px;
+  }
+
+  </style>
+ <div class="container">
+  <div class="row">
+    <div class="col-2 side">
+      <h4><a href="{% url 'file' %}">Upload File</a></h4>
+    </div>
+    <div class="col-10">
+      <div class="mini-body">
+        <h2><b>Stay Home</b></h2>
+        <h2><b>Stay Safe</b>!!</h2>
+      </div>
+  </div>
+</div>
+</body>
+</html>

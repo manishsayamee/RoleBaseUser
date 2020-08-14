@@ -1,0 +1,21 @@
+<h1>WelCome to profile</h1>
+<a href ="{% url 'accounts:upload' %}">Upload File</a></br>
+
+<hr>
+{% for msg in messages %}
+    Username: {{ request.user }}</br></br>
+    Maker:{{ request.user.is_maker }}</br>
+    Checker:{{ request.user.is_checker }}</br>
+    Descriptions: <b>{{ msg.description }}</b>
+    file:<b>{{ msg.file }}</b>
+    User: <b>{{ msg.user.username }}</b>
+    Created At: <b>{{ msg.created_on }}</b>
+    
+
+    {% if msg.user == request.user %}
+     
+    {% endif %}
+    <hr>
+{% endfor %}
+<hr>
+<a href="{% url 'accounts:logout'%}">LogOut</a>

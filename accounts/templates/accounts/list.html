@@ -1,0 +1,28 @@
+<h1>WelCome to list of all file</h1>
+<a href ="{% url 'accounts:upload' %}">Upload File</a></br>
+<a href ="{% url 'accounts:upload' %}">Upload File</a></br>
+
+<hr>
+{% for u in data %}
+    Username: {{ request.user }}</br></br>
+    Maker:{{ request.user.is_maker }}</br>
+    Checker:{{ request.user.is_checker }}</br>
+    Descriptions: <b>{{ u.description }}</b>
+    file:<b>{{ u.file }}</b>
+    User: <b>{{ u.user.username }}</b>
+    Created At: <b>{{ u.created_on }}</b>
+
+    
+
+    <a href ="{% url 'accounts:delete' u.user_id %}">Delete</a>
+    <a href ="{% url 'accounts:update' u.user_id %}">Update</a>
+</br>
+<!-- <button type="submit">Comments</button> -->
+<a href ="{% url 'accounts:comment' u.user_id %}">comment</a>
+ 
+ <!-- {% if msg.user == request.user %} -->
+    <!-- {% endif %} -->
+    <hr>
+{% endfor %}
+<hr>
+<a href="{% url 'accounts:logout'%}">LogOut</a>

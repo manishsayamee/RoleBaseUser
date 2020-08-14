@@ -1,0 +1,9 @@
+<h1>Sign Up Form</h1>
+<a href="{% url 'accounts:maker_signup' %}">Signup as maker</a></br></br>
+<a href="{% url 'accounts:checker_signup' %}">Signup as checker</a>
+
+<h2>Welcome to the Django Schools! <span class="icon-emo-happy"></span></h2>
+<p class="lead">
+  If you already have an account, go ahead and <a href="{% url 'accounts:login' %}">log in</a>. If you are new to Django Schools, get started
+  by creating a <a href="{% url 'accounts:maker_signup' %}">Maker account</a> or a <a href="{% url 'accounts:checker_signup' %}">teacher account</a>.
+</p>
